@@ -1,0 +1,104 @@
+<!-- Navigation - CABEZERA  -->
+<div th:fragment="header">
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+		<div class="container">
+			<a class="navbar-brand" th:href="@{/administrador}">Spring eCommerce</a>
+
+			<form class="form-inline my-2 my-lg-0" method="post" th:action="@{/search}"><!--Llamamos al metodo search-->
+				<input class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Search" name="nombre" 
+					autocomplete="off"> <!-- el name "nombre" tiene que ser el mismo que pusimos en el requestParam de la clase HomeController metodo search-->
+				<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
+			</form>
+
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+				aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarResponsive">
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#"
+							id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true"
+							aria-expanded="false"> ADMIN </a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+							<a class="dropdown-item" th:href="@{/productos}">Productos</a>
+							<a class="dropdown-item" th:href="@{/administrador/usuarios}">Usuarios</a>
+							<a class="dropdown-item" th:href="@{/administrador/ordenes}">Ordenes</a>
+							<a class="dropdown-item" th:href="@{/usuario/login}">Salir</a>
+
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+</div>
+
+<!-- Page Content -->
+<div class="container">
+
+
+	<!-- Page Features -->
+	<div class="row text-center">
+
+		<div class="col-lg-3 col-md-6 mb-4">
+			<div class="card h-100">
+				<img class="card-img-top" src="http://placehold.it/500x325" alt="">
+				<div class="card-body">
+					<p class="card-text">Nombre del producto.</p>
+				</div>
+				<div class="card-footer">
+					<a href="productohome.html" class="btn btn-success">Ver producto</a>
+				</div>
+			</div>
+		</div>
+
+		<div class="col-lg-3 col-md-6 mb-4">
+			<div class="card h-100">
+				<img class="card-img-top" src="http://placehold.it/500x325" alt="">
+				<div class="card-body">
+					<p class="card-text">Nombre del producto.</p>
+				</div>
+				<div class="card-footer">
+					<a href="#" class="btn btn-success">Ver producto</a>
+				</div>
+			</div>
+		</div>
+
+		<div class="col-lg-3 col-md-6 mb-4">
+			<div class="card h-100">
+				<img class="card-img-top" src="http://placehold.it/500x325" alt="">
+				<div class="card-body">
+					<p class="card-text">Nombre del producto.</p>
+				</div>
+				<div class="card-footer">
+					<a th:href="" class="btn btn-success">Ver producto</a>
+				</div>
+			</div>
+		</div>
+		<div class="col-lg-3 col-md-6 mb-4">
+			<div class="card h-100">
+				<img class="card-img-top" src="http://placehold.it/500x325" alt="">
+				<div class="card-body">
+					<p class="card-text">Nombre del producto.</p>
+				</div>
+				<div class="card-footer">
+					<a th:href="@{/productos}" class="btn btn-success">Ver producto</a>
+				</div>
+			</div>
+		</div>
+
+	</div>
+	<!-- /.row -->
+
+</div>
+<!-- /.container -->
+
+<!-- Footer -->
+<div th:fragment="footer">
+	<footer class="py-5 bg-dark">
+		<div class="container">
+			<p class="m-0 text-center text-white">Copyright &copy; Spring eCommerce 2025</p>
+		</div>
+		<!-- /.container -->
+	</footer>
+</div>
